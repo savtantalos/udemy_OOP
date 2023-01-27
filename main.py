@@ -1,16 +1,32 @@
-# This is a sample Python script.
+# class Pizza:
+#     def __init__(self, ingredients):
+#         self.ingredients = ingredients
+#
+#     def __repr__(self):
+#         return f'Pizza({self.ingredients!r})'
+#
+#     @classmethod
+#     def margherita(cls):
+#         return cls('mozzarella')
+#
+#     @classmethod
+#     def prosciutto(cls,x):
+#         return cls(x+1)
+#
+# print(Pizza.prosciutto())
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+
+class Student:
+    name = 'unknown' # class attribute
+    def __init__(self, naming, year):
+        self.age = 20  # instance attribute
+        self.naming = naming
+        self.year = year
+
+    @classmethod
+    def tostring(cls, last_name):
+        print('Student Class Attributes: name=',cls.name, last_name)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print(Student.tostring('tantalidis'))
